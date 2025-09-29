@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body> <input type="text" id="a"> <button onclick="deyis()">
+        <=>
+    </button> <input type="text" id="b">
+    <div class="hesablama"> 
+        <input type="number" id="x"> 
+        <input type="number" id="y">
+         <input type="number" id="z">
+        <button onclick="hesablama()">Ok</button>
+        <p id="res"></p>
+        <p id="res2"></p>
+        <p id="res3"></p>
+    </div>
+    <script> let a = document.getElementById('a') 
+    let b = document.getElementById('b') 
+    let x = document.getElementById('x')
+     let y = document.getElementById('y') 
+     let z = document.getElementById('z')
+      let res = document.getElementById('res') 
+      let res2 = document.getElementById('res2')
+       let res3 = document.getElementById('res3') 
+       let c = '' 
+       function deyis() {
+         c = b.value
+          b.value = a.value 
+          a.value = c
+           } 
+           function hesablama() { 
+            res.innerHTML = `Cem: ${+x.value + + y.value + +z.value}`;
+res2.innerHTML = `Ort: ${Math.round(((+x.value + + y.value + +z.value)/3)*10)/10}`;
+res3.innerHTML = `Hasil: ${x.value*y.value*z.value}`;
+            }
+             </script>
+</body>
+
+</html
